@@ -12,7 +12,7 @@ for response in tweepy.Paginator(client.search_all_tweets,
                                  tweet_fields = ['author_id','id','conversation_id','created_at','text','edit_controls','geo','in_reply_to_user_id','lang','possibly_sensitive','public_metrics','referenced_tweets','reply_settings','source'],
                                  expansions = ['author_id', 'in_reply_to_user_id','referenced_tweets.id','geo.place_id'],
                                  start_time = '2018-10-01T00:00:00Z',
-                                 end_time = '2019-10-31T00:00:00Z',
+                                 end_time = '2020-10-31T00:00:00Z',
                             max_results= 500):
     time.sleep(4)
     account_tweets.append(response)
@@ -66,4 +66,4 @@ for response in account_tweets:
 
 # Change this list of dictionaries into a dataframe
 df = pd.DataFrame(result)
-df.to_csv('ITprofessionals.csv')
+df.to_csv('TwitterDataCollection.csv')
