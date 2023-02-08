@@ -70,7 +70,7 @@ for response in account_tweets:
                     'quote_count': tweet.public_metrics['quote_count'],
                     })
 # except KeyError:
-#     print()
+#    pass
         # Change this list of dictionaries into a dataframe
 df = pd.DataFrame(result)
 
